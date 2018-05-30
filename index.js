@@ -17,7 +17,7 @@ bot.on('ready', function() {
     console.log("Connected")
 });
 
-bot.login(process.env.TOKEN);
+bot.login("NDQ5NjUxNjIxMjQ5NDE3MjI3.DfATHg.sgvXhnsUSEARfBQCxiGK18csum0");
 
 
 bot.on('message', message => {
@@ -45,7 +45,7 @@ if(!db.get("xp").find({user : msgauthor}).value()){
             .setDescription("Affichage des XP")
             .addField("XP:", `${xpfinal[1]} xp`)
             .setFooter("enjoy")
-            message.chanel.send({embed: xp_embed});
+            message.channel.send({embed: xp_embed});
         }
     if(message.content.startsWith("m!feu")){
         message.channel.send(`**${message.author.username}** lance la capacité de feu !\nDégâts : 25`,{
